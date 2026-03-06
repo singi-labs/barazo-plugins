@@ -1,0 +1,66 @@
+{
+  "name": "@barazo/plugin-signatures",
+  "displayName": "User Signatures",
+  "version": "0.1.0",
+  "description": "Display a personal signature below forum posts. Supports plain text or markdown. Portable across all Barazo instances via AT Protocol.",
+  "barazoVersion": "^1.0.0",
+  "source": "core",
+  "category": "social",
+  "author": {
+    "name": "Barazo",
+    "url": "https://barazo.forum"
+  },
+  "license": "MIT",
+  "lexicons": ["forum.barazo.actor.signature"],
+  "dependencies": [],
+  "permissions": {
+    "backend": ["db:write:plugin_signatures", "pds:read", "pds:write"],
+    "frontend": ["ui:inject:settings-community", "ui:inject:settings-global", "ui:inject:post-content"]
+  },
+  "settings": {
+    "contentMode": {
+      "type": "select",
+      "label": "Signature format",
+      "description": "Allow plain text only, or also permit markdown formatting.",
+      "default": "plaintext",
+      "options": ["plaintext", "markdown"]
+    },
+    "maxCharacters": {
+      "type": "number",
+      "label": "Maximum characters",
+      "description": "Character limit for signatures on this community.",
+      "min": 50,
+      "max": 500,
+      "default": 200
+    },
+    "displayMode": {
+      "type": "select",
+      "label": "Display frequency",
+      "description": "Show signatures on every post, or only on a user's first post per thread.",
+      "default": "first_per_thread",
+      "options": ["first_per_thread", "every_post"]
+    },
+    "newMemberDelay": {
+      "type": "number",
+      "label": "New member delay (days)",
+      "description": "Days a new member must wait before setting a signature. 0 for immediate.",
+      "min": 0,
+      "max": 365,
+      "default": 0
+    }
+  },
+  "hooks": {
+    "onInstall": "./backend/hooks.js#onInstall",
+    "onUninstall": "./backend/hooks.js#onUninstall",
+    "onEnable": "./backend/hooks.js#onEnable",
+    "onDisable": "./backend/hooks.js#onDisable",
+    "onProfileSync": "./backend/hooks.js#onProfileSync"
+  },
+  "backend": {
+    "routes": "./backend/routes.js",
+    "migrations": "./backend/migrations/"
+  },
+  "frontend": {
+    "register": "./frontend/register.js"
+  }
+}
