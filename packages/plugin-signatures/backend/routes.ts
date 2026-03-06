@@ -139,7 +139,7 @@ export const signatureRoutes: FastifyPluginCallback<SignatureRoutesOpts> = (app,
     }
 
     // Write to user's PDS
-    await ctx.atproto.putRecord('forum.barazo.actor.signature', 'self', {
+    await ctx.atproto.putRecord(user.did, 'forum.barazo.actor.signature', 'self', {
       text: body.data.text,
       createdAt: new Date().toISOString(),
     })

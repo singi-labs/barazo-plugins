@@ -13,8 +13,8 @@ export interface ScopedDatabase {
 
 export interface ScopedAtProto {
   getRecord(did: string, collection: string, rkey: string): Promise<unknown>
-  putRecord(collection: string, rkey: string, record: unknown): Promise<void>
-  deleteRecord(collection: string, rkey: string): Promise<void>
+  putRecord(did: string, collection: string, rkey: string, record: unknown): Promise<void>
+  deleteRecord(did: string, collection: string, rkey: string): Promise<void>
 }
 
 export interface ScopedCache {
