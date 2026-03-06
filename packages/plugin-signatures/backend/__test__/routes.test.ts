@@ -200,7 +200,7 @@ describe('signature routes', () => {
       expect(res.statusCode).toBe(200)
 
       // Verify PDS write
-      const pdsRecord = atproto.records.get(':forum.barazo.actor.signature:self') as
+      const pdsRecord = atproto.records.get('did:plc:user1:forum.barazo.actor.signature:self') as
         | { text: string }
         | undefined
       expect(pdsRecord).toBeDefined()

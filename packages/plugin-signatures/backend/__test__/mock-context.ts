@@ -41,12 +41,12 @@ export function createMockAtProto(): MockAtProto {
     getRecord(did: string, collection: string, rkey: string): Promise<unknown> {
       return Promise.resolve(records.get(`${did}:${collection}:${rkey}`) ?? null)
     },
-    putRecord(collection: string, rkey: string, record: unknown): Promise<void> {
-      records.set(`:${collection}:${rkey}`, record)
+    putRecord(did: string, collection: string, rkey: string, record: unknown): Promise<void> {
+      records.set(`${did}:${collection}:${rkey}`, record)
       return Promise.resolve()
     },
-    deleteRecord(collection: string, rkey: string): Promise<void> {
-      records.delete(`:${collection}:${rkey}`)
+    deleteRecord(did: string, collection: string, rkey: string): Promise<void> {
+      records.delete(`${did}:${collection}:${rkey}`)
       return Promise.resolve()
     },
   }
