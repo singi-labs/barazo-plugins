@@ -1,0 +1,4 @@
+{
+  "files": [],
+  "references": [{ "path": "packages/plugin-signatures" }, { "path": "templates/plugin-starter" }]
+}
