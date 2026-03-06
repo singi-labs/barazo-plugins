@@ -1,0 +1,5 @@
+export { signatureRoutes } from './routes.js'
+export type { SignatureRoutesOpts } from './routes.js'
+export { onInstall, onUninstall, onEnable, onDisable, onProfileSync } from './hooks.js'
+export { pluginSignatures } from './schema.js'
+export type { PluginContext, ScopedDatabase, ScopedAtProto, PluginSettings } from './types.js'
