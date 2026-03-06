@@ -1,8 +1,17 @@
-// Plugin frontend registration -- implemented in Phase 4
+import type { ComponentType } from 'react'
+import { CommunitySignatureField } from './CommunitySignatureField.js'
+import { DefaultSignatureField } from './DefaultSignatureField.js'
+import { PostSignature } from './PostSignature.js'
 
-export function register(_registry: { add: (slot: string, component: unknown) => void }): void {
-  // Phase 4 will register:
-  // registry.add('settings-community', CommunitySignatureField)
-  // registry.add('settings-global', DefaultSignatureField)
-  // registry.add('post-content', PostSignature)
+interface PluginComponentRegistry {
+  add: (slot: string, component: ComponentType<Record<string, unknown>>) => void
+}
+
+export function register(registry: PluginComponentRegistry): void {
+  registry.add(
+    'settings-community',
+    CommunitySignatureField as ComponentType<Record<string, unknown>>
+  )
+  registry.add('settings-global', DefaultSignatureField as ComponentType<Record<string, unknown>>)
+  registry.add('post-content', PostSignature as ComponentType<Record<string, unknown>>)
 }
