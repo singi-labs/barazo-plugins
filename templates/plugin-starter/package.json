@@ -1,0 +1,20 @@
+{
+  "name": "barazo-plugin-example",
+  "version": "0.1.0",
+  "description": "Example Barazo plugin",
+  "type": "module",
+  "main": "dist/backend/routes.js",
+  "exports": {
+    "./plugin.json": "./plugin.json",
+    "./backend/*": "./dist/backend/*.js",
+    "./frontend/*": "./dist/frontend/*.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "fastify": "^5.0.0"
+  }
+}

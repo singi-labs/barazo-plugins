@@ -1,0 +1,32 @@
+{
+  "name": "barazo-plugin-example",
+  "displayName": "Example Plugin",
+  "version": "0.1.0",
+  "description": "An example Barazo plugin to use as a starting point",
+  "barazoVersion": "^0.1.0",
+  "source": "community",
+  "category": "utility",
+  "author": {
+    "name": "Your Name"
+  },
+  "license": "MIT",
+  "dependencies": [],
+  "permissions": {
+    "backend": [],
+    "frontend": []
+  },
+  "settings": {
+    "greeting": {
+      "type": "string",
+      "label": "Greeting message",
+      "default": "Hello from the example plugin!"
+    }
+  },
+  "hooks": {
+    "onInstall": "./backend/hooks.js#onInstall",
+    "onEnable": "./backend/hooks.js#onEnable"
+  },
+  "backend": {
+    "routes": "./backend/routes.js"
+  }
+}
