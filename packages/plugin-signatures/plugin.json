@@ -15,7 +15,11 @@
   "dependencies": [],
   "permissions": {
     "backend": ["db:write:plugin_signatures", "pds:read", "pds:write"],
-    "frontend": ["ui:inject:settings-community", "ui:inject:settings-global", "ui:inject:post-content"]
+    "frontend": [
+      "ui:inject:settings-community",
+      "ui:inject:settings-global",
+      "ui:inject:post-content"
+    ]
   },
   "settings": {
     "contentMode": {

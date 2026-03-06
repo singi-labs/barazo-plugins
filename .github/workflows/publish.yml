@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     tags:
-      - "@barazo/plugin-*@*"
+      - '@barazo/plugin-*@*'
 
 jobs:
   publish:
