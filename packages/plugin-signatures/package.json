@@ -16,6 +16,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "build:backend": "tsc -p tsconfig.backend.json",
     "test": "vitest run"
   },
   "peerDependencies": {
