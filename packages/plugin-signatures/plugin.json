@@ -54,17 +54,17 @@
     }
   },
   "hooks": {
-    "onInstall": "./backend/hooks.js#onInstall",
-    "onUninstall": "./backend/hooks.js#onUninstall",
-    "onEnable": "./backend/hooks.js#onEnable",
-    "onDisable": "./backend/hooks.js#onDisable",
-    "onProfileSync": "./backend/hooks.js#onProfileSync"
+    "onInstall": "./dist/backend/hooks.js#onInstall",
+    "onUninstall": "./dist/backend/hooks.js#onUninstall",
+    "onEnable": "./dist/backend/hooks.js#onEnable",
+    "onDisable": "./dist/backend/hooks.js#onDisable",
+    "onProfileSync": "./dist/backend/hooks.js#onProfileSync"
   },
   "backend": {
-    "routes": "./backend/routes.js",
+    "routes": "./dist/backend/routes.js",
     "migrations": "./backend/migrations/"
   },
   "frontend": {
-    "register": "./frontend/register.js"
+    "register": "./dist/frontend/register.js"
   }
 }
