@@ -8,11 +8,11 @@
   "exports": {
     "./plugin.json": "./plugin.json",
     "./backend/*": "./dist/backend/*.js",
-    "./frontend/*": "./dist/frontend/*.js",
-    "./frontend/register": "./dist/frontend/register.js",
-    "./frontend/CommunitySignatureField": "./dist/frontend/CommunitySignatureField.js",
-    "./frontend/DefaultSignatureField": "./dist/frontend/DefaultSignatureField.js",
-    "./frontend/PostSignature": "./dist/frontend/PostSignature.js"
+    "./frontend/register": "./frontend/register.ts",
+    "./frontend/CommunitySignatureField": "./frontend/CommunitySignatureField.tsx",
+    "./frontend/DefaultSignatureField": "./frontend/DefaultSignatureField.tsx",
+    "./frontend/PostSignature": "./frontend/PostSignature.tsx",
+    "./frontend/*": "./dist/frontend/*.js"
   },
   "files": [
     "dist",
