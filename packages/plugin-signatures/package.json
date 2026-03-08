@@ -23,6 +23,10 @@
     "build:backend": "tsc -p tsconfig.backend.json",
     "test": "vitest run"
   },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
+  },
   "peerDependencies": {
     "fastify": "^5.0.0",
     "drizzle-orm": "^0.45.0",
