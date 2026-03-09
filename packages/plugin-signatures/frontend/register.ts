@@ -1,7 +1,7 @@
 import type { ComponentType } from 'react'
-import { CommunitySignatureField } from './CommunitySignatureField'
-import { DefaultSignatureField } from './DefaultSignatureField'
-import { PostSignature } from './PostSignature'
+import { CommunitySignatureField } from './CommunitySignatureField.js'
+import { DefaultSignatureField } from './DefaultSignatureField.js'
+import { PostSignature } from './PostSignature.js'
 
 interface PluginComponentRegistry {
   add: (slot: string, component: ComponentType<Record<string, unknown>>) => void
