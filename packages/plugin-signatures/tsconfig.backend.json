@@ -1,8 +1,10 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "composite": true,
+    "outDir": "dist",
+    "rootDir": ".",
     "jsx": "preserve"
   },
-  "include": ["backend/**/*.ts"],
-  "exclude": ["frontend/**/*"]
+  "include": ["backend/**/*.ts"]
 }

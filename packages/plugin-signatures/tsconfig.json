@@ -1,9 +1,4 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": ".",
-    "jsx": "react-jsx"
-  },
-  "include": ["backend/**/*.ts", "frontend/**/*.ts", "frontend/**/*.tsx", "vitest.config.ts"]
+  "files": [],
+  "references": [{ "path": "./tsconfig.backend.json" }, { "path": "./tsconfig.frontend.json" }]
 }
