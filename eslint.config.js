@@ -21,5 +21,5 @@ export default tseslint.config(
       '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
     },
   },
-  { ignores: ['**/dist/', 'node_modules/', '*.config.*'] }
+  { ignores: ['**/dist/', 'node_modules/', '**/*.config.*'] }
 )
