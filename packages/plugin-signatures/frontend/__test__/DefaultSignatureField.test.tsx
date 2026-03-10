@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/vitest'
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { render, screen, waitFor, cleanup } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
-import { DefaultSignatureField } from '../DefaultSignatureField.js'
+import { DefaultSignatureField } from '../DefaultSignatureField'
 
 const mockFetch = vi.fn()
 globalThis.fetch = mockFetch

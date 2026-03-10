@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { register } from '../register.js'
+import { register } from '../register'
 
 describe('register', () => {
   it('registers all three components to correct slots', () => {

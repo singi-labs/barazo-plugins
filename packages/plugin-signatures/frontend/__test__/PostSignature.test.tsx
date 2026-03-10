@@ -2,7 +2,7 @@
 import '@testing-library/jest-dom/vitest'
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { render, screen, waitFor, cleanup } from '@testing-library/react'
-import { PostSignature } from '../PostSignature.js'
+import { PostSignature } from '../PostSignature'
 
 const mockFetch = vi.fn()
 globalThis.fetch = mockFetch
